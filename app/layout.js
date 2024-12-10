@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import { Josefin_Sans } from "next/font/google";
 
 import "./globals.css";
 import Header from "./_components/Header";
+
 import { SearchProvider } from "./contexts/SearchContext";
 
 const josefin = Josefin_Sans({
@@ -20,10 +22,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${josefin.className} min-h-screen overflow-auto bg-background-darkest p-7 text-text-light antialiased`}
       >
-        <SearchProvider>
-          <Header />
-          {children}
-        </SearchProvider>
+        <Suspense>
+          <SearchProvider>
+            <Header />
+            {children}
+          </SearchProvider>
+        </Suspense>
       </body>
     </html>
   );
