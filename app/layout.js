@@ -11,7 +11,7 @@ const josefin = Josefin_Sans({
 
 export const metadata = {
   title: "Nextflix",
-  description: "Find good movies and shows",
+  description: "Find your favorite movies and shows",
 };
 
 export default function RootLayout({ children }) {
