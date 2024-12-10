@@ -20,7 +20,11 @@ import {
   updateWatchedMovie,
 } from "../_lib/actions";
 
-export default function MovieDetails({ watchedMovies, isSignedIn }) {
+export default function MovieDetails({
+  watchedMovies,
+  isSignedIn,
+  selectedId,
+}) {
   const router = useRouter();
   const {
     handleCloseMovie,
@@ -29,8 +33,8 @@ export default function MovieDetails({ watchedMovies, isSignedIn }) {
     handleUpdateLocally,
   } = useSearch();
 
-  const searchParams = useSearchParams();
-  const selectedId = searchParams.get("selectedId");
+  // const searchParams = useSearchParams();
+  // const selectedId = searchParams.get("selectedId");
 
   const [isAddPending, startAddTransition] = useTransition();
   const [isDeletePending, startDeleteTransition] = useTransition();

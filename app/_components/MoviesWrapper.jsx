@@ -50,6 +50,7 @@ function MoviesWrapper({ isSignedIn, initialWatchedMovies, selectedId }) {
           <MovieDetails
             watchedMovies={displayedMovies}
             isSignedIn={isSignedIn}
+            selectedId={selectedId}
           />
         ) : (
           <>
