@@ -31,8 +31,8 @@ function MoviesWrapper({ isSignedIn, initialWatchedMovies, selectedId }) {
               Watchlist Not Saved
             </h2>
             <p className="text-md mb-2 text-gray-600">
-              Your watchlist won't be saved unless you sign in. Sign in to save
-              your movies!
+              Your watchlist won&apos;t be saved unless you sign in. Sign in to
+              save your movies!
             </p>
             <Link
               // Redirect to sign-in page
